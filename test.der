@@ -10,4 +10,9 @@ func Main(){ // Main function will be executed first always. Else they will be e
   var d = concat(1)
   printf(d)
 
+  ^m = magic(11) //micropointer ^m will be created at 11 line.
+  exec(^m)
+  &ma // creates pointer to specific place of code
 }
+
+ 
