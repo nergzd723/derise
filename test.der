@@ -1,0 +1,13 @@
+Application Main //comments are handled as it is. Application token give the program its name to import it from other program. NOTE if you need to import
+                 //certain program you need to specify name that you typed in Application string.
+func multiply(var(int) a, var(int) b) //This declarates EF. EF returns 0. 
+func concat(var(int) a){ iret(a+1) iret() } //iret with value returns it. iret without it usually means that error happened
+^^ dart // creates a micropointer, which executes line of code just above it. So it will try to redeclare func concat
+unsafe(^dart) //dart wont be executed. It wont be able to execute and just will return 0. Do magic(^dart) to revert
+
+func Main(){ // Main function will be executed first always. Else they will be executed in order
+  exec(^dart) //actually, dart produces not a string nor a pointer. It returns special type - var(exec) dart. We need exec function to execute it.
+  var d = concat(1)
+  printf(d)
+
+}
